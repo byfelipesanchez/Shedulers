@@ -33,30 +33,28 @@ def send_email():
     print("email sent!")
 
 def request():
-    r = requests.get('https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch')
+    r = requests.get('https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch','https://finance.yahoo.com/quote/TRPL4.SA/')
     soup = bs4.BeautifulSoup(r.text, 'lxml')
     return soup
 
-class script:
 
-
-    def parse(soup):
+def parse(soup):
         date = datetime.datetime.now()
-        name = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
-        price = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
-        total = {'date':date, 'name': name ,'price':price}
+        name1 = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+        price1 = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+        total = {'date':date, 'name': name1 ,'price':price1, }
         return total
 
 
-    def output(total):
+def output(total):
         gc = gspread.service_account(filename='creds.json')
-        sh = gc.open('webscraper').sheet1
+        sh = gc.open('Stocks').sheet1
         sh.append_row([str(total['date']), str(total['name']), str(total['price'])])
 
-    data = request()
-    total = parse(data)
-    output(total)
-    print(total)
+data = request()
+total = parse(data)
+output(total)
+print(total)
 
 
 
