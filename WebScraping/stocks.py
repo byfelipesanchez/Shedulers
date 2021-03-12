@@ -1,4 +1,4 @@
-
+#
 import requests
 import bs4
 import gspread
@@ -9,30 +9,30 @@ from subprocess import call
 import time
 
 
-# def send_email():
-#     port = 465
+def send_email():
+    port = 465
 
-#     sender, password = 'senderemailfs@gmail.com', 'FelipeSanchezsSenderEmail'
+    sender, password = 'senderemailfs@gmail.com', 'FelipeSanchezsSenderEmail'
 
-#     recieve = '2018.felipe.sanchez@gmail.com'
+    recieve = '2018.felipe.sanchez@gmail.com'
 
-#     message = '''\
-#     Subject: Testing Python Email
+    message = '''
+    Subject: Testing Python Email
 
-#     Message via Python!
+    Message via Python!
 
-#     Felipe
+    Felipe
 
-#     '''
+    '''
 
-#     context = ssl.create_default_context()
+    context = ssl.create_default_context()
 
-#     print("starting to send")
-#     with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context)as server:
-#         server.login(sender, password)
-#         server.sendmail(sender, recieve, message)
+    print("starting to send")
+    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context)as server:
+        server.login(sender, password)
+        server.sendmail(sender, recieve, message)
 
-#     print("email sent!")
+    print("email sent!")
 
 def request():
     r = requests.get('https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch')
@@ -44,7 +44,7 @@ def parse(soup):
         date = datetime.datetime.now()
         name = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
         price = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
-        total = {'date':date, 'name': name ,'price':price, }
+        total = {'date':date, 'name': name ,'price':price}
         return total
 
 
@@ -206,13 +206,105 @@ total = parse6(data)
 output6(total)
 print(total)
 
+def request7():
+    r = requests.get('https://finance.yahoo.com/quote/CSNA3.SA/')
+    soup = bs4.BeautifulSoup(r.text, 'lxml')
+    return soup
 
-def final_output():
-        line1 = "-"
-        line2 = "-"
-        line3 = "-"
-        lines = line1, line2, line3
+
+def parse7(soup):
+        date = datetime.datetime.now()
+        name7 = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+        price7 = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+        total = {'date':date, 'name': name7 ,'price':price7, }
+        return total
+
+
+def output7(total):
         gc = gspread.service_account(filename='creds.json')
         sh = gc.open('Stocks').sheet1
-        sh.append_row(lines)
-        print(lines)
+        sh.append_row([str(total['date']), str(total['name']), str(total['price'])])
+
+data = request7()
+total = parse7(data)
+output7(total)
+print(total)
+
+def request8():
+    r = requests.get('https://finance.yahoo.com/quote/ITSA4.SA/')
+    soup = bs4.BeautifulSoup(r.text, 'lxml')
+    return soup
+
+
+def parse8(soup):
+        date = datetime.datetime.now()
+        name8 = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+        price8 = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+        total = {'date':date, 'name': name8 ,'price':price8, }
+        return total
+
+def output8(total):
+        gc = gspread.service_account(filename='creds.json')
+        sh = gc.open('Stocks').sheet1
+        sh.append_row([str(total['date']), str(total['name']), str(total['price'])])
+
+data = request8()
+total = parse8(data)
+output8(total)
+print(total)
+
+
+def request9():
+    r = requests.get('https://br.financas.yahoo.com/quote/BBAS3.SA/')
+    soup = bs4.BeautifulSoup(r.text, 'lxml')
+    return soup
+
+
+def parse9(soup):
+        date = datetime.datetime.now()
+        name9 = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+        price9 = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+        total = {'date':date, 'name': name9 ,'price':price9, }
+        return total
+
+def output9(total):
+        gc = gspread.service_account(filename='creds.json')
+        sh = gc.open('Stocks').sheet1
+        sh.append_row([str(total['date']), str(total['name']), str(total['price'])])
+
+data = request9()
+total = parse9(data)
+output9(total)
+print(total)
+
+def request10():
+    r = requests.get('https://br.financas.yahoo.com/quote/VALE3.SA/')
+    soup = bs4.BeautifulSoup(r.text, 'lxml')
+    return soup
+
+
+def parse10(soup):
+        date = datetime.datetime.now()
+        name10 = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+        price10 = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+        total = {'date':date, 'name': name10 ,'price':price10, }
+        return total
+
+def output10(total):
+        gc = gspread.service_account(filename='creds.json')
+        sh = gc.open('Stocks').sheet1
+        sh.append_row([str(total['date']), str(total['name']), str(total['price'])])
+
+data = request10()
+total = parse10(data)
+output10(total)
+print(total)
+
+##
+
+lines = ("-","-", "-")
+gc = gspread.service_account(filename='creds.json')
+sh = gc.open('Stocks').sheet1
+sh.append_row(lines)
+print(lines)
+ 
