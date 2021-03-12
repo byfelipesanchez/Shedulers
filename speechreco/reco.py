@@ -32,10 +32,25 @@ def get_audio():
 
 text = get_audio()
 
-# TALK_STRS = ["hello","start coding environment", "prepare for coding", "i am gonna programm", "intialize coding environment"]
+CODE_STRS = ["coding", "environment", "intialize"]
+for phrase in CODE_STRS:
+	if phrase in text:
+		speak("Okay, preparing your coding workspace!")
+		web.open('https://github.com/byfelipesanchez')
+		web.open('https://leetcode.com/')
+		os.startfile('C:\\WINDOWS\\system32\\cmd')
+		os.startfile('C:\\Program Files\\Sublime Text 3\\sublime_text')
+		os.startfile('C:\\Users\\2018f\\AppData\\Local\\GitHubDesktop\\GitHubDesktop')
 
-if "hello" or "start coding environment" or "prepare for coding" or "i am gonna programm" or "intialize coding environment" in text:
-	speak("Okay, intializing your coding workspace! This will take just a second...")
-	os.startfile('C:\\Program Files\\Sublime Text 3\\sublime_text')
-	# speak("All Done!")
-# speak("hello felipe, how are you doing")
+
+STY_STRS = ["prepare for studying", "study", "studying"]
+for phrase in STY_STRS:
+	if phrase in text:
+		speak("Okay, preparing your studying workspace!")
+		web.open("https://www.youtube.com/")
+		web.open("https://calendar.google.com/calendar/u/0/r/month")
+		web.open('https://docs.google.com/spreadsheets/d/1gKKb8IRe0FVfm2NfwSBisoC40DZ-mnH26hXoWqtoUHY/edit#gid=0')
+
+
+
+
