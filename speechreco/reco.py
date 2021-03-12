@@ -37,5 +37,5 @@ text = get_audio()
 if "hello" or "start coding environment" or "prepare for coding" or "i am gonna programm" or "intialize coding environment" in text:
 	speak("Okay, intializing your coding workspace! This will take just a second...")
 	os.startfile('C:\\Program Files\\Sublime Text 3\\sublime_text')
-	speak("All Done!")
+	# speak("All Done!")
 # speak("hello felipe, how are you doing")
