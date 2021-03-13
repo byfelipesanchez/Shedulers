@@ -1,4 +1,4 @@
-import smtplib, ssl 
+import smtplib, ssl
 
 
 class Start:
@@ -18,11 +18,11 @@ class Menu:
 			e - Email Current Links
 			l - Check Links Library
 			""")
-		
+
 		menuu = input("How would you like to continue?")
 		if menuu == "f":
 			print("open and add links to library.json ")
-			#open and add links to library.json 
+			#open and add links to library.json
 		elif menuu == "e":
 			email()
 		elif menuu == "l":
