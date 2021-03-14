@@ -31,7 +31,7 @@ class Menu:
 	def email(self, menuu):
 		print("email test")
 		port = 465
-		sender, password = 'senderemailfs@gmail.com', 'FelipeSanchezsSenderEmail'
+		sender, password = '######', '#######'
 		recieve = '2018.felipe.sanchez@gmail.com'
 		message = '''\
 		Subject: Testing Python Email
