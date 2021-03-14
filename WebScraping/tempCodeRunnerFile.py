@@ -1,7 +1,7 @@
 def send_email():
     port = 465
 
-    sender, password = 'senderemailfs@gmail.com', 'FelipeSanchezsSenderEmail'
+    sender, password = '#######', '###'
 
     recieve = '2018.felipe.sanchez@gmail.com'
 
