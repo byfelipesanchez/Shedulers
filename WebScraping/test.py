@@ -15,8 +15,8 @@ mail_charset = "ISO-2022-JP"
 targeturl = 'https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch' # Target URL for scraping
 targetclass = ('h1', {'class':'D(ib) Fz(18px)'}) # Target element for scraping
 
-from_address = "senderemailfs@gmail.com" # Sender address (Gmail address)
-from_password = "FelipeSanchezsSenderEmail" # Sender server password (Gmail password)
+from_address = "###### # Sender address (Gmail address)
+from_password = "######" # Sender server password (Gmail password)
 to_address   = "2018.felipe.sanchez@gmail.com" # Recipient address
 
 statusOK = u"Found / "
