@@ -1,12 +1,3 @@
 {
-  "type": "service_account",
-  "project_id": "currencys-305400",
-  "private_key_id": "b04c92d3e937b6183c14f1cc081f53535297ccb6",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnEv32vnxSuI8P\nExMsFLQP93GfVd1rd4XsJiq4Qbt5wMZMWRDmQnfnWLf8HSvkWoh+5mMAAvBbBTlV\nwBWkkdIiDWtb1etbhLtpNNzOnKnPxvveHBGKR6HO8AEi0kZDbd4r2e7JMaiZVJxs\n7DDc5GOQjbWZjK1N7F42q99qQ8t7rl1uBi+xuhFzCPJ15a13mPuJ0nbeXU/vz7LI\nLWm9ebjbT0YRtTXtykpcP7ZTsLesyR1yMV4APryTHQJVpQ+M2SL+dII0H4mRQWCb\n64ZE76gYxyz0RbHDtAlNg/u9k5Eeaw9rHGolwSIxluZHB1yZWUvVDGt1T3JkPUqz\nzq/YN4BfAgMBAAECggEACG0/TPYvnBZ99LMwGN2UdWe0Hea9S8HUCeSk6/U4yPvN\npKUrYonAtXT2lqs7/wEH+GqTXLlJOTYKvcX58Xp/YENQAmpIPC32K+jEKFGjiPzO\n0FWXFuPlB+R4EjML4zPD7G9KCXDNQaqQVzgUgNeuI+jZ23xKc280E0rY8mmn9j1w\nqyX8oZiltpC2NHC3Wms1rktgFAUz6CA4oKKUM9O5JFCp/6irgk6ZP8KF0pSbmq1h\nFdXqLzm0lF+3XnTMYBa/Jt4UkPRa+Dn2vcHgLKzXkiXpooa/XQ9qF5wf+9zXiAOv\nsiPmzUPJOPNoC3TYbnS5mjSE8QtoBlh0WCDz4cESeQKBgQDpA0Ts3iwizw2GqBUq\naqh5B68zrP/jrJ9o2RiJcoFWDe3njyb8NYDjgDAb+NglRrlqjk/CkvQ2pH7Z7o16\nc1ySDiMcQxCK01w8AtupqchhJsp6WbUVzz1ZO79Gs2a2QSeX7ooE301a1dxgRk/E\nYKAvU3q1oh6wUyd2IEfGviTsFwKBgQC3jnIgqnxxqfOKEucuWiYiR9DoZQnw5zX2\nJdIDdf9ltBvp92jYLXSJBkl86sk5HopkiUTGq4ct1JKjX+pT79l7yXXhd2VaoDz4\nUesKhyu//sRfPLVnp5OGXMwigveAnIBS1DvkZBuHfDUfM/TnAA8Ir2h/TCyIJ+Ua\nCh0UL1XS+QKBgDRyPu5Np4OCNRos9O6iKR9swluQQdxd+1dfHe257zCOXBD1oKG9\n7S/Hp4x0OzpQq+U2+O7josI1zjOBRSjdlGVvdymiUrPclPMQ9Z4/j9GGKKbXUDID\nflx6XTgtox28lovU7g3gsQmT/1FQIh4iXYupb4I4Zk3ruYMWCvHJ1IerAoGATSGj\nXYymXFDxEJ0e3gBts8v/whfrFHrj1vpPhLrJxl/ntuoK+YQoSwgES2SRh9oIh3ST\nHPSpCh4gPFyqp/jKp9ShH0w/n9Rjqmkp3jOss7IHrIljJRpqyHQoJ3xnKnkZBzU9\nsZxLYSRVYjY/++2vY5Pp0kwdDl3NTKLhU0EMzGkCgYEAkXewIgHRrKcwSZ3iP3uc\nqWqZphgPL4yP2oTbywqvBYVKlrdPk9Jmb/+UqO8/itQItmFRNEEZ4eMAe+tw773E\nigQcEv1lhHT+hFATcH9Q20fGcKXyHwQ260ypJwx8Fw5ZPFNKbunc6kpoaQ5rJ7ix\n9ehs9JKoyaOJYKuCmyVXPeI=\n-----END PRIVATE KEY-----\n",
-  "client_email": "currency-tracker@currencys-305400.iam.gserviceaccount.com",
-  "client_id": "113882981295777025896",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/currency-tracker%40currencys-305400.iam.gserviceaccount.com"
+#######
 }
