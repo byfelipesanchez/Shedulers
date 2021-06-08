@@ -58,26 +58,28 @@ class Main:
 
 self.text = get_audio(self)
 
-class Parse:
-  def __init__(self, request, parse, output):
-    self.request = request
-    self.parse = parse
-    self.output = output
-    
-  def request(self):
+class Parse(Main)
 
-# def request():
-#     r = requests.get('https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch')
-#     soup = bs4.BeautifulSoup(r.text, 'lxml')
-#     return soup
+  def request(self, request, soup):
+	self.request = request
+	self.soup = soup
+	self.r = requests.get('https://br.financas.yahoo.com/quote/KLBN4.SA?p=KLBN4.SA&.tsrc=fin-srch')
+ 	self.soup = bs4.BeautifulSoup(r.text, 'lxml')
+     return self.soup
+	
 
 
-# def parse(soup):
-#         date = datetime.datetime.now()
-#         name = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
-#         price = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
-#         total = {'date':date, 'name': name ,'price':price}
-#         return total
+   def parse(self, soup, data, name, price, total):
+	 self.data = data
+	 self.name = name
+	 self.price = price
+	 self.total = total
+	
+         self.date = datetime.datetime.now()
+         self.name = soup.find('h1', class_ = 'D(ib) Fz(18px)').text.strip()
+         self.price = soup.find_all('div', {'class':"My(6px) Pos(r) smartphone_Mt(6px)"})[0].find('span').text
+         self.total = {'date':self.date, 'name': self.name ,'price':price}
+         return self.total
 
 
 # def output(total):
